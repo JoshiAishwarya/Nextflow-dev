@@ -1,0 +1,23 @@
+# Nextflow cache and logs
+.nextflow*
+work/
+
+# Results
+results/
+
+# Data files
+data/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
