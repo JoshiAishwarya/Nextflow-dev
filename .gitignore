@@ -1,6 +1,10 @@
-# Nextflow cache and logs
+# Nextflow
 .nextflow*
 work/
+.trace
+.timeline*
+.report*
+dag.html
 
 # Results
 results/
@@ -12,12 +16,19 @@ data/
 *.fq
 *.fq.gz
 
+# Reference genome
+reference_genome/
+
 # Logs
 *.log
 
 # Python
 __pycache__/
 
-# IDE
+# IDE / Editor
 .vscode/
 .idea/
+*.swp
+
+# OS
+.DS_Store
