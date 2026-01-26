@@ -1,5 +1,3 @@
-nextflow.enable.dsl=2
-
 include { FASTQC as FASTQC_RAW }  from './modules/fastqc.nf'
 include { FASTQC as FASTQC_TRIM } from './modules/fastqc.nf'
 include { CUTADAPT }              from './modules/cutadapt.nf'
