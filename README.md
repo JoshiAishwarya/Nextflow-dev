@@ -1,6 +1,27 @@
-# Nextflow Variant Calling Pipeline
+## Nextflow Variant Calling Pipeline
 
 A bioinformatics pipeline for automated variant calling from paired-end FASTQ sequencing data using industry-standard tools.
+
+## Pipeline Workflow
+Input FASTQ files (data/*_{1,2}.fastq.gz)
+        ↓
+   FASTQC_RAW (Quality Control)
+        ↓
+    CUTADAPT (Adapter Trimming)
+        ↓
+  FASTQC_TRIM (Post-trim QC)
+        ↓
+   BWA_ALIGN (Read Alignment)
+        ↓
+  SAM_TO_BAM (Format Conversion)
+        ↓
+   SORT_BAM (BAM Sorting)
+        ↓
+VARIANT_CALLING (Call Variants)
+        ↓
+FILTER_VARIANTS (Filter Quality Variants)
+        ↓
+Final VCF files (results/8_filtered/)
 
 ## Overview
 
@@ -23,19 +44,3 @@ This Nextflow pipeline automates the complete variant calling workflow for next-
 - Detailed execution reports and timelines
 - Conda environment support
 - Reproducible and portable across systems
-
-## Prerequisites
-
-- **Nextflow** ≥ 21.04.0
-- **Java** ≥ 11
-- **FastQC**
-- **Cutadapt**
-- **BWA**
-- **Samtools**
-- **BCFtools**
-- **Conda**
-
-## Installation
-
-Install required tools using Conda:
-```bash
