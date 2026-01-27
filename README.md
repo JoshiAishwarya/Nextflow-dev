@@ -3,7 +3,7 @@
 A bioinformatics pipeline for automated variant calling from paired-end FASTQ sequencing data using industry-standard tools.
 
 ## Pipeline Workflow
-'''
+```text
 Input FASTQ files (data/*_{1,2}.fastq.gz)
         ↓
    FASTQC_RAW (Quality Control)
@@ -23,7 +23,7 @@ VARIANT_CALLING (Call Variants)
 FILTER_VARIANTS (Filter Quality Variants)
         ↓
 Final VCF files (results/8_filtered/)
-'''
+```
 ## Overview
 
 This Nextflow pipeline automates the complete variant calling workflow for next-generation sequencing (NGS) data:
