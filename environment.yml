@@ -1,0 +1,13 @@
+name: bnf
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.14
+  - fastqc=0.12.1
+  - cutadapt=5.2
+  - bwa=0.7.18
+  - samtools=1.21
+  - bcftools=1.21
+  - nextflow=24.10.6
