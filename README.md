@@ -79,28 +79,46 @@ Benefits: Reproducible, portable, and scalable
 - Reproducible and portable across systems
 
 
-## How to Clone the Repository
+## Setup Instructions
+
+### Clone the Repository
+```bash
 git clone https://github.com/JoshiAishwarya/Nextflow-dev.git
 cd nextflow-pipeline
+```
 
-
-## Create, Activate and Deactivate Conda Environment
+### Create and Activate Conda Environment
+```bash
 conda env create -f environment.yml
 conda activate bnf
-conda deactivate
+```
+
+---
 
 ## Prepare Reference Genome
-# Create directory
+
+### Create directory
+```bash
 mkdir -p reference_genome
+```
 
-# Place your reference FASTA file (e.g., chr22.fa) in reference_genome/
+### Place your reference FASTA file (e.g., chr22.fa) in reference_genome/
 
-# Index the reference genome for BWA
+### Index the reference genome for BWA
+```bash
 bwa index reference_genome/chr22.fa
+```
 
+---
 
 ## How to Run the Pipeline
+```bash
 nextflow run main.nf
+```
 
-# Resume a failed run (continues from last successful step)
+### Resume a failed run (continues from last successful step)
+```bash
 nextflow run main.nf -resume
+```
+
+---
