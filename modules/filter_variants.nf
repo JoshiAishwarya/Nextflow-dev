@@ -11,8 +11,8 @@ process FILTER_VARIANTS {
     """
     echo "Filtering variants for ${sample_id}..."
     
-    bcftools filter \
-        -i 'QUAL>20 && DP>10' \
+    ${params.bcftools_bin} filter \
+        -i "QUAL>${params.min_variant_quality} && DP>${params.min_depth}" \
         ${raw_vcf} \
         -o ${sample_id}_filtered.vcf
     
